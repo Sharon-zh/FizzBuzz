@@ -1,6 +1,7 @@
 public class Reduce {
-    public static int main(Integer n) {
+    public static void main(String[] args) {
         int num = 0;
+        int n = 100;
         while (n > 0) {
             if (n % 2 == 0) {
                 n = n / 2;
@@ -9,6 +10,6 @@ public class Reduce {
             }
             num++;
         }
-        return num;
+        System.out.println(num);
     }
 }
