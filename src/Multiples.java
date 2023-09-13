@@ -1,23 +1,14 @@
 public class Multiples {
-    public static void main(String[] args) {
+    public static int main(Integer n, Integer a, Integer b){
         int i = 1;
-        while (i < 1000) {
-
-            i = doFizzBuzz(i);
+        int num = 0;
+        while (i < n) {
+            if (i % a == 0 || i % b == 0) {
+                num++;
+            }
+            i++;
         }
-    }
-
-    public static int doFizzBuzz(int i) {
-        // Find out which numbers divide i.
-        boolean divisibleBy3 = i % 3 == 0;
-        boolean divisibleBy5 = i % 5 == 0;
-
-        // Print our appropriate result.
-        if (divisibleBy3 || divisibleBy5) {
-
-            System.out.println(i);
-        }
-        i++;
-        return i;
+        return num;
     }
 }
+
